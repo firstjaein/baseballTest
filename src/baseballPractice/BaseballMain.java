@@ -5,10 +5,7 @@ public class BaseballMain {
 	public static void main(String[] args) {
 		
 		boolean isFinish = false;
-		// Instance of Computer
 		Computer com = new Computer();
-		// Instance of User
-		//User user = new User();
 		int[] userDigit = new int[3];
 		System.out.print("Computer's choice is : ");
 		com.comNum();
@@ -32,8 +29,8 @@ public class BaseballMain {
 	{
 		int fNumCnt = fNum.length;
 		int sNumCnt = sNum.length;
-		int ballCnt = 0;
-		int stCnt = 0;
+		int ballCnt = 0;	//ball count
+		int stCnt = 0;		//strike count
 		for(int i = 0; i < fNumCnt; i++)
 		{
 			
@@ -60,7 +57,7 @@ public class BaseballMain {
 		}
 		else
 		{
-			System.out.println((ballCnt+stCnt) == 0 ? "noting" : (ballCnt+" ball," + stCnt+ " strike."));
+			System.out.println((ballCnt+stCnt) == 0 ? "nothing" : (ballCnt+" ball," + stCnt+ " strike."));
 			return false;
 		}
 		

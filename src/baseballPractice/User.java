@@ -9,7 +9,7 @@ public class User {
 			for (int i = 0; i < userDigit.length; i++) {
 			userDigit[i] = random.nextInt(9) + 1;
 			System.out.print(userDigit[i]);
-		}//end of for
+		}
 	}
 	
 	public int[] getUserNum()

@@ -5,15 +5,12 @@ import java.util.Scanner;
 public class BaseballMain {
 
 	public static final int ENDcount = 3;
-
 	public static void main(String[] args) {
-
+		
 		boolean isFinish = false;
-		Computer com = new Computer();
 		RandomNumber randomNumber = new RandomNumber();
 		int[] userDigit = new int[ENDcount];
 		System.out.println("컴퓨터의 랜덤숫자는..");
-//		com.comNum();
 		randomNumber.makeRandomNumber();
 
 		System.out.println("");
@@ -26,7 +23,6 @@ public class BaseballMain {
 				System.out.println(i + " 숫자입력:");
 				userDigit[i] = sc.nextInt();
 			}
-//			isFinish = compareNums(userDigit, com.getComNum());
 			isFinish = compareNums(userDigit, randomNumber.getRandomNumber());
 		} // End of While
 	} // End of Main
@@ -47,7 +43,6 @@ public class BaseballMain {
 
 		if (stCnt == ENDcount) {
 			System.out.println("컴퓨터의 입력값은 :" + sNum[0] + "" + sNum[1] + "" + sNum[2]);
-			// System.out.println("정답");
 			return true;
 		} else {
 			System.out.println((ballCnt + stCnt) == 0 ? "nothing" : (ballCnt + " ball," + stCnt + " strike."));

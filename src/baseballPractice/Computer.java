@@ -1,4 +1,5 @@
 package baseballPractice;
+
 import java.util.Random;
 
 public class Computer {
@@ -12,7 +13,8 @@ public class Computer {
 			comDigit[i] = random.nextInt(9) + 1;
 			System.out.print(comDigit[i]);
 		}
-	}//End of comNum
+
+	}// End of comNum
 
 	public int[] getComNum() {
 		return this.comDigit;

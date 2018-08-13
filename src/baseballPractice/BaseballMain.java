@@ -11,15 +11,15 @@ public class BaseballMain {
 		boolean isFinish = false;
 		Computer com = new Computer();
 		int[] userDigit = new int[ENDcount];
-		System.out.print("Computer's choice is : ");
+		System.out.println("컴퓨터의 랜덤숫자는..");
 		com.comNum();
 
 		System.out.println("");
-		System.out.print("User's choice is : ");
+		System.out.println("3자리 랜덤숫자를 맞춰보세요.");
 		Scanner sc = new Scanner(System.in);
 
 		while (!isFinish) {
-			System.out.println("숫자입력");
+			
 			for (int i = 0; i < userDigit.length; i++) {
 				System.out.println(i + " 숫자입력:");
 				userDigit[i] = sc.nextInt();

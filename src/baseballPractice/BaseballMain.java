@@ -20,7 +20,7 @@ public class BaseballMain {
 			for (int i = 0; i < userDigit.length; i++) {
 				System.out.println("");
 				System.out.println(i + " 숫자입력:");
-				userDigit[i] = sc.nextInt();
+				userDigit[i] = sc.nextInt();	//숫자만 입력받게 예외코드 작성 필요.
 			}
 			CompareNum compareNum = new CompareNum();
 //			isFinish = compareNum.compareNum(userDigit, randomNumber.getRandomNumber());

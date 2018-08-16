@@ -16,7 +16,6 @@ public class testValidateNumberTwo {
 				number = input.nextInt();
 				break;
 			} catch (InputMismatchException ime) {
-				input = new Scanner(System.in);
 				System.out.println("잘못된 입력입니다.정수만 입력하세요.");
 			} catch (Exception e) {
 			}

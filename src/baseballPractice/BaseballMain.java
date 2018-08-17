@@ -28,6 +28,7 @@ public class BaseballMain {
 			boolean isFinish = false;
 			isFinish = compareNum.compareNum(userDigit, randomNumber.getRandomNumber());
 			if (isFinish == true) {
+				System.out.println("\n" + "정답입니다." + "새로운 게임을 시작합니다.");
 				randomNumber.makeRandomNumber();
 			}
 		} // End of while

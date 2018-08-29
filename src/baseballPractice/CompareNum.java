@@ -4,26 +4,38 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompareNum {
-	public boolean compareNum(int[] fNum, int[] sNum) {
-		int fNumCnt = fNum.length; // user's digit
-		int sNumCnt = sNum.length; // com's random digit
-		int ballCnt = 0; // ball count
-		int stCnt = 0; // strike count
+	
+	public int checkStrike(int[] fNum, int[] sNum) {
+		int stCnt = 0;
 
-		List<Integer> alist = new ArrayList<Integer>();
-		for (int i : fNum) {
-			alist.add(i);
-		}
-		int idx = sNum.length;
-		for (int i = 0; i < idx; i++) {
-			if (alist.contains(sNum[i])) {
-				if (alist.get(i) == sNum[i]) {
+		for (int i = 0; i < fNum.length; i++) {
+			for (int j = 0; j < sNum.length; j++) {
+				if (fNum[i] == sNum[j] && i == j) {
 					stCnt++;
-				} else {
-					ballCnt++;
 				}
 			}
 		}
+		return stCnt;
+	}
+
+	public int checkBall(int[] fNum, int[] sNum) {
+
+		int ballCnt = 0;
+
+		for (int i = 0; i < fNum.length; i++) {
+			for (int j = 0; j < sNum.length; j++) {
+				if (fNum[i] == sNum[j] && i != j) {
+					ballCnt+=1;
+				}
+			}
+		}
+		return ballCnt;
+	}
+	public boolean compareNum(int[] fNum, int[] sNum) {
+		
+
+		int stCnt = checkStrike(fNum, sNum);
+		int ballCnt = checkBall(fNum, sNum);
 
 		if (stCnt == BaseballMain.EndCount) {
 			System.out.println("정답!컴퓨터의 입력값은 " + sNum[0] + "" + sNum[1] + "" + sNum[2]);

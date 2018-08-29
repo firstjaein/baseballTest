@@ -7,7 +7,7 @@ public class testValidateNumberTwo {
 
 	public static void main(String[] args) {
 
-		System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Scanner input = new Scanner(System.in);
 		int number = 0;
 
@@ -16,7 +16,7 @@ public class testValidateNumberTwo {
 				number = input.nextInt();
 				break;
 			} catch (InputMismatchException ime) {
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.Á¤¼ö¸¸ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥ì…ë‹ˆë‹¤. ì •ìˆ˜ë§Œ ì…ë ¥ í•˜ì„¸ìš”.");
 			} catch (Exception e) {
 			}
 		}

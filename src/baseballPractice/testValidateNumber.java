@@ -7,13 +7,13 @@ public class testValidateNumber {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("0À» Á¦¿ÜÇÑ ÇÑÀÚ¸® ¼ıÀÚ¸¸ ÀÔ·ÂÇÏ¼¼¿ä. ¹®ÀÚ¸¦ ÀÔ·ÂÇÏ¸é ¿¡·¯¸¦ »Õ¾î¿ä.");
+		System.out.println("0ì„ ì œì™¸í•œ í•œìë¦¬ ìˆ«ìë§Œ ì…ë ¥í•˜ì„¸ìš”. ë¬¸ìë¥¼ ì…ë ¥í•˜ë©´ ì—ëŸ¬ê°€ ë°œìƒí•´ìš”.");
 		while (!scan.hasNextInt()) {
 			scan.next();
-			System.err.print("¿¡·¯! ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù. \nÀç ¼±ÅÃ : ");
+			System.err.print("ì—ëŸ¬! ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤. \nì¬ ì„ íƒ : ");
 		} // End of while
 		scan.nextLine();
 		int scanNumber = scan.nextInt();
-		System.out.println("ÀÔ·ÂÇÑ ¼ıÀÚ´Â: " + scanNumber);
+		System.out.println("ì…ë ¥í•œ ìˆ«ìëŠ”: " + scanNumber);
 	}
 }

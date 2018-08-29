@@ -9,18 +9,18 @@ public class BaseballMain {
 	public static void main(String[] args) {
 		RandomNumber randomNumber = new RandomNumber();
 		int[] userDigit = new int[EndCount];
-		System.out.println("3ÀÚ¸® ·£´ı¼ıÀÚ¸¦ ¸ÂÃçº¸¼¼¿ä.");
+		System.out.println("3ìë¦¬ ëœë¤ìˆ«ìë¥¼ ë§ì¶°ë³´ì„¸ìš”.");
 		Scanner sc = new Scanner(System.in);
 		randomNumber.makeRandomNumber();
 
 		while (true) {
 			for (int i = 0; i < userDigit.length; i++) {
 				System.out.println("");
-				System.out.println(i + " ¼ıÀÚÀÔ·Â:");
+				System.out.println(i + " ìˆ«ìì…ë ¥:");
 				try {
 					userDigit[i] = Integer.parseInt(sc.next());
 				} catch (NumberFormatException nfe) {
-					System.err.println("Àß¸øµÈ ÀÔ·Â.¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+					System.out.println("ì˜ëª»ëœ ì…ë ¥.ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 					i--;
 				}
 			}
@@ -28,7 +28,7 @@ public class BaseballMain {
 			boolean isFinish = false;
 			isFinish = compareNum.compareNum(userDigit, randomNumber.getRandomNumber());
 			if (isFinish == true) {
-				System.out.println("\n" + "Á¤´äÀÔ´Ï´Ù." + "»õ·Î¿î °ÔÀÓÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+				System.out.println("\n" + "ì •ë‹µì…ë‹ˆë‹¤." + "ìƒˆë¡œìš´ ê²Œì„ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
 				randomNumber.makeRandomNumber();
 			}
 		} // End of while

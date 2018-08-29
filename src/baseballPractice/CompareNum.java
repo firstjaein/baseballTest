@@ -1,8 +1,5 @@
 package baseballPractice;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CompareNum {
 	
 	public int checkStrike(int[] fNum, int[] sNum) {
